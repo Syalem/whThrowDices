@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>WH dices throw</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>WH dices throw</h1>
+      <p>Please select the sorting threshold first <i class="fa-solid fa-dice"></i></p>
+      <div class="button">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        <nav class="menu">
+          <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+          <label class="menu-open-button" for="menu-open">
+            <span class="menu-dices"><i class="fa-solid fa-dice"></i></span>
+          </label>
+
+          <label class="menu-item six" for="menu-open">
+            <span><i class="fa-solid fa-dice-six"></i></span>
+          </label>
+          <label class="menu-item five" for="menu-open">
+            <span><i class="fa-solid fa-dice-five"></i></span>
+          </label>
+          <label class="menu-item four" for="menu-open">
+            <span><i class="fa-solid fa-dice-four"></i></span>
+          </label>
+          <label class="menu-item three" for="menu-open">
+            <span><i class="fa-solid fa-dice-three"></i></span>
+          </label>
+          <label class="menu-item two" for="menu-open">
+            <span><i class="fa-solid fa-dice-two"></i></span>
+          </label>
+          <!-- <a href="#" class="menu-item six"> <i class="fa-solid fa-dice-six"></i> </a>
+          <a href="#" class="menu-item five"> <i class="fa-solid fa-dice-five"></i> </a>
+          <a href="#" class="menu-item four"> <i class="fa-solid fa-dice-four"></i> </a>
+          <a href="#" class="menu-item three"> <i class="fa-solid fa-dice-three"></i> </a>
+          <a href="#" class="menu-item two"> <i class="fa-solid fa-dice-two"></i> </a> -->
+        </nav>
+        <!-- filters -->
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+              <filter id="shadowed-goo">
+
+                  <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                  <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+                  <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+                  <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+                  <feBlend in2="shadow" in="goo" result="goo" />
+                  <feBlend in2="goo" in="SourceGraphic" result="mix" />
+              </filter>
+              <filter id="goo">
+                  <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                  <feBlend in2="goo" in="SourceGraphic" result="mix" />
+              </filter>
+            </defs>
+        </svg>
+      </div>
+
+      <div class="sorting-selected">
+        <p id="sorting-selected"></p>
+      </div>
+
+
+    <div class="dropdown button">
+      <input type="checkbox" id="dropdown">
+
+      <label class="dropdown__face" for="dropdown">
+        <div class="dropdown__text">Select number of dices</div>
+
+        <!-- <div class="dropdown__arrow"></div> -->
+      </label>
+
+      <div class="dropdown__items">
+
+        <div class=number-input><input type="number" id="dices-quantity" name="dices-quantity"
+               min="1" max="50" step="1" value="1">
+                     <label class="dices-quantity" for="dices-quantity"></label></div>
+        <div><button class="button-throw" role="button">Throw !</button></div>
+      </div>
+    </div>
+
+    <svg>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+        <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+        <feBlend in="SourceGraphic" in2="goo" />
+      </filter>
+    </svg>
+
+    <p class="error-threshold"></p>
+    <table>
+      <tr>
+        <td><p style="display: inline-block;">Under threshold</p><p class="txt-under" style="display: inline-block;"></p></td>
+        <td><p style="display: inline-block;">Threshold or above</p><p class="txt-above" style="display: inline-block;"></p></td>
+      </tr>
+      <tr>
+        <td class="rectangle" id = "under-threshold"></td>
+        <td class="rectangle" id = "above-threshold"></td>
+      </tr>
+    </table>
+
+    </div>
+      <!-- <div class="dice-img">
+        <p>Player 1</p>
+        <img class="img1" src="">
+      </div>
+
+      <div class="dice-img">
+        <p>Player 2</p>
+        <img class="img2" src="">
+      </div> -->
+
+
+  <script src="index.js" charset="utf-8"></script>
+  <script src="https://kit.fontawesome.com/9e03b35453.js" crossorigin="anonymous"></script>
+  </body>
+
+  <footer>
+    <a href="mailto:maelys.le.moine@gmail.com" style="text-decoration: none;"><i class="fa-solid fa-code"></i> Maëlys' sandbox <i class="fa-solid fa-code"></i></a>
+  </footer>
+</html>
